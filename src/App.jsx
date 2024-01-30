@@ -13,7 +13,6 @@ function App() {
   return (
     <PrimeReactProvider>
       <>
-        <img src={"./assets/257899.svg"} alt="Logo Prefeitura de Fortaleza" />
         <h1>Home</h1>
         {cadastroForm ? (
           <CadastroVisitante handleCadastroForm={handleCadastroForm} />
