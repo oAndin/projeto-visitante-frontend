@@ -6,16 +6,31 @@ import { useState } from "react";
 function App() {
   const [cadastroForm, setCadastroForm] = useState(true);
 
+  const handleCadastroForm = () => {
+    setCadastroForm(!cadastroForm);
+  };
+
   return (
     <PrimeReactProvider>
       <>
+        <img src={"./assets/257899.svg"} alt="Logo Prefeitura de Fortaleza" />
         <h1>Home</h1>
         {cadastroForm ? (
-          <CadastroVisitante setLoginForm={setCadastroForm} />
+          <CadastroVisitante handleCadastroForm={handleCadastroForm} />
         ) : (
-          <LoginVisitante setLoginForm={setCadastroForm} />
+          <LoginVisitante handleCadastroForm={handleCadastroForm} />
         )}
       </>
+      <h6 className="developerTxt">
+        Desenvolvido por
+        <i>
+          <a href="https://github.com/oAndin">Andherson Costa</a>
+        </i>
+        &
+        <i>
+          <a href="https://github.com/ocaueo">Cauê Oliveira</a>
+        </i>
+      </h6>
     </PrimeReactProvider>
   );
 }
