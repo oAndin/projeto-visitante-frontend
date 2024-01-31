@@ -4,7 +4,6 @@ import { InputMask } from "primereact/inputmask";
 const CadastroVisitante = ({ handleCadastroForm }) => {
   return (
     <>
-      {" "}
       <div className="container">
         <h1>Seja bem-vindo(a) Visitante</h1>
         <div className="inputContainer">
@@ -13,7 +12,11 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
         </div>
         <div className="inputContainer">
           <label htmlFor="">CPF</label>
-          <InputMask placeholder="999.999.999-99" mask="999.999.999-99" />
+          <InputMask
+            placeholder="999.999.999-99"
+            mask="999.999.999-99"
+            keyfilter={/^[^<>*!]+$/}
+          />
         </div>
         <div className="inputContainer">
           <label htmlFor="">Profissão</label>
@@ -31,7 +34,11 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
         </div>
         <div className="inputContainer">
           <label htmlFor="">CEP</label>
-          <InputMask placeholder="99999-999" mask="99999-999" />
+          <InputMask
+            placeholder="99999-999"
+            mask="99999-999"
+            keyfilter={/^[^<>*!]+$/}
+          />
         </div>
         <div className="side-side">
           <div className="inputContainer">
