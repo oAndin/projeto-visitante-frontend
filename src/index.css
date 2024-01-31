@@ -4,13 +4,18 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  border: none;
 }
 
-body {
+body,
+#root {
   width: 100%;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
 }
 
 .developerTxt {
@@ -21,9 +26,106 @@ body {
   text-align: center;
 }
 
+.logoPrefeitura{
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
 
-
-div.input {
+div.container {
   display: flex;
+  position: relative;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 85%;
+  padding: 1.5rem;
+  gap: 1rem;
+  background-color: #fff;
+  border: 1px solid #000;
+
+  & h1 {
+    transform: translateY(-95%);
+    color: #111010;
+  }
+
+  & .inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    & label {
+      margin-bottom: 0.5rem;
+    }
+
+    & input {
+      height: 2.5rem;
+      padding-left: 1rem;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+  }
+  & .side-side {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  & .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      margin-bottom: 5rem;
+    & button {
+      cursor: pointer;
+      color: #fff;
+      background-color: green;
+      border-radius: 4px;
+      width: 100%;
+      height: 2.5rem;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        background-color: #0a0;
+
+      }
+    }
+  }
+
+  & div.switchBtn{
+    position: absolute;
+    bottom: 5%;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    cursor: pointer;
+    & p {
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+    & button {
+      width: 100%;
+      height: 2.5rem;
+    }
+  }
+}
+
+div.container.login {
+
+  & input {
+    width: 100%;
+    position: relative;
+    padding-left: 1rem;
+  }
+  
+  & i {
+    position: absolute;
+    right: 1rem;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 }
