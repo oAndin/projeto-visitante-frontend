@@ -5,8 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DashBoard from "./routes/DashBoard/Index.jsx";
 import BarChartsPage from "./routes/Charts/BarChartsPage/Index.jsx";
-import PizzaChartsPage from "./routes/Charts/PizzaChartsPage/Index.jsx";
 import HomePage from "./routes/Home/Index.jsx";
+import PieChartsPage from "./routes/Charts/PieChartsPage/Index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,13 +24,13 @@ const router = createBrowserRouter([
       },
       {
         // block non adm acess to dashboard
-        path: "/dashboard/barcharts",
+        path: "/dashboard/barchart",
         element: <BarChartsPage />,
       },
       {
         // block non adm acess to dashboard
-        path: "/dashboard/pizzacharts",
-        element: <PizzaChartsPage />,
+        path: "/dashboard/piechart",
+        element: <PieChartsPage />,
       },
     ],
     errorElement: <Error />,

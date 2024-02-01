@@ -51,7 +51,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
           </div>
         </div>
         <div className="buttonContainer">
-          <button>Enviar</button>
+          <button>Cadastrar</button>
         </div>
         <div className="switchBtn">
           <p>Já tem cadastro?</p>

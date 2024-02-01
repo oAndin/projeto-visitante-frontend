@@ -15,6 +15,9 @@ const LoginVisitante = ({ handleCadastroForm }) => {
           <label htmlFor="">Senha</label>
           <Password toggleMask />
         </div>
+        <div className="buttonContainer">
+          <Button label="Entrar" />
+        </div>
         <div className="switchBtn">
           <p>Não tenho cadastro</p>
           <Button onClick={() => handleCadastroForm()} label="Cadastro" />

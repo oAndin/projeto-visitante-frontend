@@ -1,8 +1,15 @@
+import BarCharts from "../../components/BarChart/Index";
+import PieChartGender from "../../components/PieChart/Index";
+
 const DashBoard = () => {
   return (
     <>
-      <h1>DASHBOARD</h1>
-      <div>DashBoard</div>
+      <div className="dashboard-container">
+        <BarCharts />
+        <PieChartGender />
+        <BarCharts />
+        <PieChartGender />
+      </div>
     </>
   );
 };
