@@ -46,8 +46,13 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
           city,
           district,
         }),
-      });
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
     }
+    console.log(name, cpf, profession, gender, cep, city, district);
     console.log("Cadastro enviado");
   };
 
@@ -79,10 +84,20 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
         <div className="side-side">
           <div className="inputContainer">
             <label htmlFor="">Gênero</label>
-            <select name="" id="" onChange={(e) => setGender(e.target.value)}>
-              <option value="Masculino">Masculino</option>
-              <option value="Feminino">Feminino</option>
-              <option value="Outro">Outro</option>
+            <select
+              name="gender"
+              id=""
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option name="gender" value="Masculino">
+                Masculino
+              </option>
+              <option name="gender" value="Feminino">
+                Feminino
+              </option>
+              <option name="gender" value="Outro">
+                Outro
+              </option>
             </select>
           </div>
           <div className="inputContainer">
