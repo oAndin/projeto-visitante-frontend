@@ -1,6 +1,6 @@
 import { PieChart, Pie, Tooltip } from "recharts";
 
-const PieChartGender = () => {
+const PieChartGender = ({ width, height, radius }) => {
   const data = [
     { name: "Masculino", value: 400 },
     { name: "Feminino", value: 300 },
@@ -9,14 +9,14 @@ const PieChartGender = () => {
 
   return (
     <div className="piechart-container">
-      <PieChart width={400} height={400}>
+      <PieChart width={width} height={height}>
         <Pie
           dataKey="value"
           isAnimationActive={true}
           data={data}
           cx="50%"
           cy="50%"
-          outerRadius={80}
+          outerRadius={radius}
           fill="#8884d8"
           label={true}
         />

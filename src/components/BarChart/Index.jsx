@@ -9,7 +9,7 @@ import {
   Legend,
 } from "recharts";
 
-const BarCharts = () => {
+const BarCharts = ({ width, height }) => {
   const data = [
     {
       name: "Page A",
@@ -58,15 +58,15 @@ const BarCharts = () => {
     <>
       <div className="barchart-container">
         <BarChart
-          width={400}
-          height={250}
+          width={width}
+          height={height}
           data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
+          // margin={{
+          //   top: 5,
+          //   right: 30,
+          //   left: 20,
+          //   bottom: 5,
+          // }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
