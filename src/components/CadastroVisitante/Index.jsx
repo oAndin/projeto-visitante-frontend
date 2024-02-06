@@ -90,6 +90,9 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
               onChange={(e) => setGender(e.target.value)}
             >
               <option name="gender" value="Masculino">
+                Selecione uma opção
+              </option>
+              <option name="gender" value="Masculino">
                 Masculino
               </option>
               <option name="gender" value="Feminino">
