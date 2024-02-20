@@ -28,11 +28,10 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
       profession !== "" &&
       gender !== "" &&
       age !== "" &&
-      cep !== "" &&
       city !== "" &&
       district !== ""
     ) {
-      fetch("http://localhost:5000/visitante", {
+      fetch("http://localhost:8000/visitante", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,20 +41,27 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
           cpf,
           profession,
           gender,
-          cep,
           city,
           district,
         }),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Erro ao cadastrar visitante");
+          }
+          return response;
+        })
         .then((data) => {
           console.log(data);
+          console.log(name, cpf, profession, gender, cep, city, district);
+          console.log("Cadastro enviado");
         });
+      // .catch((error) => {});
+      // .catch((error)  => {
+      //   console.log("Deu erro", error);
+      // });
     }
-    console.log(name, cpf, profession, gender, cep, city, district);
-    console.log("Cadastro enviado");
   };
-
   return (
     <>
       <div className="container">
@@ -65,6 +71,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
           <input
             type="text"
             placeholder="Nome completo"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
