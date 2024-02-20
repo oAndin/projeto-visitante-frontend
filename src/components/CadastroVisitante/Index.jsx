@@ -81,12 +81,17 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
             placeholder="999.999.999-99"
             mask="999.999.999-99"
             keyfilter={/^[^<>*!]+$/}
+            value={cpf}
             onChange={(e) => setCpf(e.target.value)}
           />
         </div>
         <div className="inputContainer">
           <label htmlFor="">Profissão</label>
-          <input type="text" onChange={(e) => setProfession(e.target.value)} />
+          <input
+            value={profession}
+            type="text"
+            onChange={(e) => setProfession(e.target.value)}
+          />
         </div>
         <div className="side-side">
           <div className="inputContainer">
@@ -94,6 +99,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
             <select
               name="gender"
               id=""
+              value={gender}
               onChange={(e) => setGender(e.target.value)}
             >
               <option name="gender" value="Masculino">
@@ -114,6 +120,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
             <label htmlFor="">Idade</label>
             <input
               type="number"
+              value={age}
               onChange={(e) => setAge(e.target.value)}
               min="0"
             />
@@ -125,6 +132,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
             placeholder="99999-999"
             mask="99999-999"
             keyfilter={/^[^<>*!]+$/}
+            value={cep}
             onChange={(e) => setCep(e.target.value)}
             onBlur={() => callApiCep(cep)}
           />
