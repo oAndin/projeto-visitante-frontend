@@ -159,8 +159,9 @@ div.dashboard-container {
 div.barchart-container {
   border: 1px solid #000;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 4rem;
   background-color: #fff;
+  position: relative;
 }
 div.piechart-container {
   border: 1px solid #000;
@@ -168,7 +169,6 @@ div.piechart-container {
   padding: 2rem;
   background-color: #fff;
 }
-
 @media scren and (min-width: 768px) {
   .side-side {
     flex-direction: column;
