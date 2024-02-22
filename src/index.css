@@ -156,19 +156,6 @@ div.dashboard-container {
   border: 1px solid #000;
 }
 
-div.barchart-container {
-  border: 1px solid #000;
-  border-radius: 4px;
-  padding: 4rem;
-  background-color: #fff;
-  position: relative;
-}
-div.piechart-container {
-  border: 1px solid #000;
-  border-radius: 4px;
-  padding: 2rem;
-  background-color: #fff;
-}
 @media scren and (min-width: 768px) {
   .side-side {
     flex-direction: column;
@@ -178,4 +165,31 @@ div.piechart-container {
   .side-side {
     flex-direction: column;
   }
+}
+
+.chartComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c4c4c4;
+  border: 1px solid #000;
+  border-radius: 4px;
+
+}
+
+.btnDayMonth {
+  width: 10%;
+  padding: 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 24px;
+  user-select: none;
+  cursor: pointer;
 }

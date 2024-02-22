@@ -2,11 +2,74 @@ import { useEffect, useState } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Bar, Chart } from "react-chartjs-2";
 import { set } from "lodash";
+
 const BarCharts = () => {
+  const months = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  const days = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+  ];
   // getting data from the api
   const [data, setData] = useState([]);
   const [day, setDay] = useState([]);
-  const [isDay, setIsDay] = useState(true);
+  const [isDay, setIsDay] = useState(false);
+  const [chartData, setChartData] = useState({
+    labels: isDay ? days : months,
+    datasets: [
+      {
+        backgroundColor: "#0026ff33",
+        data: [
+          10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 90, 80, 70, 60, 50, 40, 30,
+          20, 10,
+        ],
+        // data: day.map((data) => data.count),
+        label: "Visitas",
+        borderWidth: 1,
+      },
+    ],
+  });
 
   // I need to save the day and how many visits it happened that day!
   // day1 = 0 ... day31 = 0
@@ -62,27 +125,33 @@ const BarCharts = () => {
     data.map((visit) => console.log(visit.visited_on));
     // I need to save the month and how many visits it happened that month!
   }
-  const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
   // visitedCount();
-  let [chartData, setChartData] = useState({
-    labels: months,
-    // labels: day.map((data)=> data.test),
-    // labels: day.map((data) => data.test),
-    datasets: [
-      {
-        backgroundColor: "#0026ff33",
-        data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-        // data: day.map((data) => data.count),
-        label: "Visitas",
-        borderWidth: 1,
-      },
-    ],
-  });
+  useEffect(() => {
+    setChartData({
+      labels: isDay ? days : months,
+      datasets: [
+        {
+          backgroundColor: "#0026ff33",
+          data: [
+            10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 90, 80, 70, 60, 50, 40, 30,
+            20, 10,
+          ],
+          // data: day.map((data) => data.count),
+          label: "Visitas",
+          borderWidth: 1,
+        },
+      ],
+    });
+  }, [isDay]);
 
   return (
-    <>
-      <Chart width={700} type="bar" data={chartData} />
-    </>
+    <div className="chartComponent">
+      <h1 className="btnDayMonth" onClick={() => setIsDay(!isDay)}>
+        {isDay ? "dia" : "mês"}
+      </h1>
+      <h1>{isDay ? "Visitas por dia" : "Visitas por mês"}</h1>
+      <Chart width={600} type="bar" data={chartData} />
+    </div>
   );
 };
 

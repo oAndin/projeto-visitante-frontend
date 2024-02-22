@@ -1,29 +1,42 @@
-import { PieChart, Pie, Tooltip } from "recharts";
+import { useState, useEffect } from "react";
+import { Chart } from "primereact/chart";
 
-const PieChartGender = ({ width, height, radius }) => {
-  const data = [
-    { name: "Masculino", value: 400 },
-    { name: "Feminino", value: 300 },
-    { name: "Outros", value: 300 },
-  ];
+export default function PieChartDemo() {
+  const [chartData, setChartData] = useState({});
+  const [chartOptions, setChartOptions] = useState({});
+  const [data, setData] = useState([]);
+
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    const documentStyle = getComputedStyle(document.documentElement);
+    const data = {
+      labels: ["A", "B", "C"],
+      datasets: [
+        {
+          data: [540, 325, 702],
+          backgroundColor: ["#3fd5ffab", "#ff3f3fab", "#a83fffab"],
+          hoverBackgroundColor: ["#3fd5ff", "#ff3f3f", "#a83fff"],
+        },
+      ],
+    };
+    const options = {
+      plugins: {
+        legend: {
+          labels: {
+            usePointStyle: true,
+          },
+        },
+      },
+    };
+
+    setChartData(data);
+    setChartOptions(options);
+  }, []);
 
   return (
-    <div className="piechart-container">
-      <PieChart width={width} height={height}>
-        <Pie
-          dataKey="value"
-          isAnimationActive={true}
-          data={data}
-          cx="50%"
-          cy="50%"
-          outerRadius={radius}
-          fill="#8884d8"
-          label={true}
-        />
-        <Tooltip />
-      </PieChart>
-    </div>
+    <>
+      <Chart type="pie" data={chartData} options={chartOptions} />
+    </>
   );
-};
-
-export default PieChartGender;
+}
