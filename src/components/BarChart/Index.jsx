@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Bar, Chart } from "react-chartjs-2";
+import { set } from "lodash";
 const BarCharts = () => {
   // getting data from the api
   const [data, setData] = useState([]);
@@ -61,10 +62,11 @@ const BarCharts = () => {
     data.map((visit) => console.log(visit.visited_on));
     // I need to save the month and how many visits it happened that month!
   }
+  const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
   // visitedCount();
-
   let [chartData, setChartData] = useState({
-    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    labels: months,
+    // labels: day.map((data)=> data.test),
     // labels: day.map((data) => data.test),
     datasets: [
       {
@@ -72,7 +74,7 @@ const BarCharts = () => {
         data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
         // data: day.map((data) => data.count),
         label: "Visitas",
-        borderWidth: 1
+        borderWidth: 1,
       },
     ],
   });
