@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
 import { Chart } from "primereact/chart";
 
-const BarCharts = () => {
+const BarCharts = ({ days, months }) => {
   const [isDay, setIsDay] = useState(true);
   const [data, setData] = useState([]);
 
   const fetchData = () => {
+    let labelDays = days.map((day) => day.id);
+    let labelMonths = months.map((month) => month.name);
+    let dataType = isDay ? "day" : "month";
     fetch("http://localhost:5000/visitante")
       .then((response) => response.json())
-      .then((visitantes) => {});
+      .then((visitantes) => {
+        console.log(visitantes);
+      });
+
     const data = {
-      labels: ["Q1", "Q2", "Q3", "Q4"],
+      labels: isDay ? labelDays : labelMonths,
       datasets: [
         {
-          label: "Sales",
-          data: [540, 325, 702, 620],
+          label: isDay ? "dia" : "mês",
+          data: isDay
+            ? [1, 2, 3, 4, 5, 4, 3, 2, 1, 6, 3, 13, 35, 45]
+            : [1234, 12345, 1234, 12345],
           backgroundColor: [
             "rgba(255, 159, 64, 0.2)",
             "rgba(75, 192, 192, 0.2)",
@@ -27,11 +35,12 @@ const BarCharts = () => {
             "rgb(54, 162, 235)",
             "rgb(153, 102, 255)",
           ],
-          borderWidth: 1,
+          borderWidth: 3,
         },
       ],
     };
     const options = {
+      responsive: true,
       scales: {
         y: {
           beginAtZero: true,
@@ -44,10 +53,6 @@ const BarCharts = () => {
   };
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
-
-  useEffect(() => {}, []);
-
-  // getting data from the api
 
   useEffect(() => {
     fetchData();
