@@ -2,47 +2,47 @@
   "days": [
     {
       "id": 1,
-      "count": "1",
-      "test" : "1234"
+      "count": "0",
+      "test": "1234"
     },
     {
       "id": 2,
-      "count": "2",
-      "test" : "2134"
+      "count": "0",
+      "test": "2134"
     },
     {
       "id": 3,
-      "count": "3",
-      "test" : "3421"
+      "count": "0",
+      "test": "3421"
     },
     {
       "id": 4,
-      "count": "4",
-      "test" : "4321"
+      "count": "0",
+      "test": "4321"
     },
     {
       "id": 5,
-      "count": "5"
+      "count": "0"
     },
     {
       "id": 6,
-      "count": "6"
+      "count": "0"
     },
     {
       "id": 7,
-      "count": "7"
+      "count": "0"
     },
     {
       "id": 8,
-      "count": "8"
+      "count": "0"
     },
     {
       "id": 9,
-      "count": "9"
+      "count": "0"
     },
     {
       "id": 10,
-      "count": "10"
+      "count": "0"
     },
     {
       "id": 11,
@@ -128,6 +128,20 @@
       "id": 31,
       "count": "0"
     }
+  ],
+  "months": [
+    { "name": "Janeiro" },
+    { "name": "Fevereiro" },
+    { "name": "Março" },
+    { "name": "Abril" },
+    { "name": "Maio" },
+    { "name": "Junho" },
+    { "name": "Julho" },
+    { "name": "Agosto" },
+    { "name": "Setembro" },
+    { "name": "Outubro" },
+    { "name": "Novembro" },
+    { "name": "Dezembro" }
   ],
   "visitante": [
     {
@@ -459,6 +473,13 @@
       "city": "São Paulo",
       "district": "Jardins",
       "visited_on": "2026-06-15"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin"
     }
   ]
 }

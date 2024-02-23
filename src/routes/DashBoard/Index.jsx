@@ -5,8 +5,8 @@ const DashBoard = () => {
   return (
     <>
       <div className="dashboard-container">
-        <BarCharts width={300} height={200} />
-        <PieChartGender width={300} height={200} radius={50} />
+        <BarCharts />
+        <PieChartGender />
       </div>
     </>
   );
