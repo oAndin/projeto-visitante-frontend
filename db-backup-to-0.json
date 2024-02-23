@@ -1,187 +1,151 @@
 {
   "days": [
     {
-      "id": "1",
+      "id": 1,
       "count": "0",
       "test": "1234"
     },
     {
-      "id": "2",
+      "id": 2,
       "count": "0",
       "test": "2134"
     },
     {
-      "id": "3",
+      "id": 3,
       "count": "0",
       "test": "3421"
     },
     {
-      "id": "4",
+      "id": 4,
       "count": "0",
       "test": "4321"
     },
     {
-      "id": "5",
+      "id": 5,
       "count": "0"
     },
     {
-      "id": "6",
+      "id": 6,
       "count": "0"
     },
     {
-      "id": "7",
+      "id": 7,
       "count": "0"
     },
     {
-      "id": "8",
+      "id": 8,
       "count": "0"
     },
     {
-      "id": "9",
+      "id": 9,
       "count": "0"
     },
     {
-      "id": "10",
+      "id": 10,
       "count": "0"
     },
     {
-      "id": "11",
+      "id": 11,
       "count": "0"
     },
     {
-      "id": "12",
+      "id": 12,
       "count": "0"
     },
     {
-      "id": "13",
+      "id": 13,
       "count": "0"
     },
     {
-      "id": "14",
+      "id": 14,
       "count": "0"
     },
     {
-      "id": "15",
+      "id": 15,
       "count": "0"
     },
     {
-      "id": "16",
+      "id": 16,
       "count": "0"
     },
     {
-      "id": "17",
+      "id": 17,
       "count": "0"
     },
     {
-      "id": "18",
+      "id": 18,
       "count": "0"
     },
     {
-      "id": "19",
+      "id": 19,
       "count": "0"
     },
     {
-      "id": "20",
+      "id": 20,
       "count": "0"
     },
     {
-      "id": "21",
+      "id": 21,
       "count": "0"
     },
     {
-      "id": "22",
+      "id": 22,
       "count": "0"
     },
     {
-      "id": "23",
+      "id": 23,
       "count": "0"
     },
     {
-      "id": "24",
+      "id": 24,
       "count": "0"
     },
     {
-      "id": "25",
+      "id": 25,
       "count": "0"
     },
     {
-      "id": "26",
+      "id": 26,
       "count": "0"
     },
     {
-      "id": "27",
+      "id": 27,
       "count": "0"
     },
     {
-      "id": "28",
+      "id": 28,
       "count": "0"
     },
     {
-      "id": "29",
+      "id": 29,
       "count": "0"
     },
     {
-      "id": "30",
+      "id": 30,
       "count": "0"
     },
     {
-      "id": "31",
+      "id": 31,
       "count": "0"
     }
   ],
   "months": [
-    {
-      "name": "Janeiro",
-      "id": "b6a0"
-    },
-    {
-      "name": "Fevereiro",
-      "id": "3d62"
-    },
-    {
-      "name": "Março",
-      "id": "de62"
-    },
-    {
-      "name": "Abril",
-      "id": "5870"
-    },
-    {
-      "name": "Maio",
-      "id": "406a"
-    },
-    {
-      "name": "Junho",
-      "id": "aabd"
-    },
-    {
-      "name": "Julho",
-      "id": "eb72"
-    },
-    {
-      "name": "Agosto",
-      "id": "210f"
-    },
-    {
-      "name": "Setembro",
-      "id": "d745"
-    },
-    {
-      "name": "Outubro",
-      "id": "3e63"
-    },
-    {
-      "name": "Novembro",
-      "id": "5adb"
-    },
-    {
-      "name": "Dezembro",
-      "id": "03e5"
-    }
+    { "name": "Janeiro" },
+    { "name": "Fevereiro" },
+    { "name": "Março" },
+    { "name": "Abril" },
+    { "name": "Maio" },
+    { "name": "Junho" },
+    { "name": "Julho" },
+    { "name": "Agosto" },
+    { "name": "Setembro" },
+    { "name": "Outubro" },
+    { "name": "Novembro" },
+    { "name": "Dezembro" }
   ],
   "visitante": [
     {
-      "id": "1",
+      "id": 1,
       "cpf": "111.111.111-11",
       "name": "Lucas Silva",
       "profession": "Engineer",
@@ -192,7 +156,7 @@
       "visited_on": "2024-01-05"
     },
     {
-      "id": "2",
+      "id": 2,
       "cpf": "222.222.222-22",
       "name": "Juliana Santos",
       "profession": "Doctor",
@@ -203,7 +167,7 @@
       "visited_on": "2024-02-12"
     },
     {
-      "id": "3",
+      "id": 3,
       "cpf": "333.333.333-33",
       "name": "Carlos Oliveira",
       "profession": "Architect",
@@ -214,7 +178,7 @@
       "visited_on": "2024-03-18"
     },
     {
-      "id": "4",
+      "id": 4,
       "cpf": "444.444.444-44",
       "name": "Mariana Costa",
       "profession": "Teacher",
@@ -225,7 +189,7 @@
       "visited_on": "2024-04-24"
     },
     {
-      "id": "5",
+      "id": 5,
       "cpf": "555.555.555-55",
       "name": "Rafael Oliveira",
       "profession": "Software Developer",
@@ -236,7 +200,7 @@
       "visited_on": "2024-05-30"
     },
     {
-      "id": "6",
+      "id": 6,
       "cpf": "666.666.666-66",
       "name": "Camila Souza",
       "profession": "Nurse",
@@ -247,7 +211,7 @@
       "visited_on": "2024-06-15"
     },
     {
-      "id": "7",
+      "id": 7,
       "cpf": "777.777.777-77",
       "name": "Vinícius Santos",
       "profession": "Chef",
@@ -258,7 +222,7 @@
       "visited_on": "2024-07-20"
     },
     {
-      "id": "8",
+      "id": 8,
       "cpf": "888.888.888-88",
       "name": "Aline Lima",
       "profession": "Journalist",
@@ -269,7 +233,7 @@
       "visited_on": "2024-08-10"
     },
     {
-      "id": "9",
+      "id": 9,
       "cpf": "999.999.999-99",
       "name": "Pedro Pereira",
       "profession": "Mechanic",
@@ -280,7 +244,7 @@
       "visited_on": "2024-09-05"
     },
     {
-      "id": "10",
+      "id": 10,
       "cpf": "101.010.101-01",
       "name": "Gabriela Oliveira",
       "profession": "Dentist",
@@ -291,7 +255,7 @@
       "visited_on": "2024-10-12"
     },
     {
-      "id": "11",
+      "id": 11,
       "cpf": "111.111.111-12",
       "name": "André Santos",
       "profession": "Electrical Engineer",
@@ -302,7 +266,7 @@
       "visited_on": "2024-11-18"
     },
     {
-      "id": "12",
+      "id": 12,
       "cpf": "121.212.121-21",
       "name": "Henrique Oliveira",
       "profession": "Architect",
@@ -313,7 +277,7 @@
       "visited_on": "2024-12-24"
     },
     {
-      "id": "13",
+      "id": 13,
       "cpf": "131.313.131-31",
       "name": "Isabela Santos",
       "profession": "Journalist",
@@ -324,7 +288,7 @@
       "visited_on": "2025-01-05"
     },
     {
-      "id": "14",
+      "id": 14,
       "cpf": "141.414.141-41",
       "name": "Ricardo Lima",
       "profession": "IT Specialist",
@@ -335,7 +299,7 @@
       "visited_on": "2025-02-12"
     },
     {
-      "id": "15",
+      "id": 15,
       "cpf": "151.515.151-51",
       "name": "Vanessa Oliveira",
       "profession": "Psychiatrist",
@@ -346,7 +310,7 @@
       "visited_on": "2025-03-18"
     },
     {
-      "id": "16",
+      "id": 16,
       "cpf": "161.616.161-61",
       "name": "Felipe Silva",
       "profession": "Civil Engineer",
@@ -357,7 +321,7 @@
       "visited_on": "2025-04-24"
     },
     {
-      "id": "17",
+      "id": 17,
       "cpf": "171.717.171-71",
       "name": "Laura Costa",
       "profession": "Graphic Designer",
@@ -368,7 +332,7 @@
       "visited_on": "2025-05-30"
     },
     {
-      "id": "18",
+      "id": 18,
       "cpf": "181.818.181-81",
       "name": "Gustavo Santos",
       "profession": "Software Developer",
@@ -379,7 +343,7 @@
       "visited_on": "2025-06-15"
     },
     {
-      "id": "19",
+      "id": 19,
       "cpf": "191.919.191-91",
       "name": "Evelyn Oliveira",
       "profession": "Dentist",
@@ -390,7 +354,7 @@
       "visited_on": "2025-07-20"
     },
     {
-      "id": "20",
+      "id": 20,
       "cpf": "202.020.202-02",
       "name": "Vinícius Lima",
       "profession": "Mechanical Engineer",
@@ -401,7 +365,7 @@
       "visited_on": "2025-08-10"
     },
     {
-      "id": "21",
+      "id": 21,
       "cpf": "212.121.212-21",
       "name": "Henrique Oliveira",
       "profession": "Architect",
@@ -412,7 +376,7 @@
       "visited_on": "2025-09-05"
     },
     {
-      "id": "22",
+      "id": 22,
       "cpf": "222.222.222-22",
       "name": "Isabela Santos",
       "profession": "Journalist",
@@ -423,7 +387,7 @@
       "visited_on": "2025-10-12"
     },
     {
-      "id": "23",
+      "id": 23,
       "cpf": "232.323.232-32",
       "name": "Ricardo Lima",
       "profession": "IT Specialist",
@@ -434,7 +398,7 @@
       "visited_on": "2025-11-18"
     },
     {
-      "id": "24",
+      "id": 24,
       "cpf": "242.424.242-42",
       "name": "Vanessa Oliveira",
       "profession": "Psychiatrist",
@@ -445,7 +409,7 @@
       "visited_on": "2025-12-24"
     },
     {
-      "id": "25",
+      "id": 25,
       "cpf": "252.525.252-52",
       "name": "Felipe Silva",
       "profession": "Civil Engineer",
@@ -456,7 +420,7 @@
       "visited_on": "2026-01-05"
     },
     {
-      "id": "26",
+      "id": 26,
       "cpf": "262.626.262-62",
       "name": "Laura Costa",
       "profession": "Graphic Designer",
@@ -467,7 +431,7 @@
       "visited_on": "2026-02-12"
     },
     {
-      "id": "27",
+      "id": 27,
       "cpf": "272.727.272-72",
       "name": "Gustavo Santos",
       "profession": "Software Developer",
@@ -478,7 +442,7 @@
       "visited_on": "2026-03-18"
     },
     {
-      "id": "28",
+      "id": 28,
       "cpf": "282.828.282-82",
       "name": "Evelyn Oliveira",
       "profession": "Dentist",
@@ -489,7 +453,7 @@
       "visited_on": "2026-04-24"
     },
     {
-      "id": "29",
+      "id": 29,
       "cpf": "292.929.292-92",
       "name": "Vinícius Lima",
       "profession": "Mechanical Engineer",
@@ -500,7 +464,7 @@
       "visited_on": "2026-05-30"
     },
     {
-      "id": "30",
+      "id": 30,
       "cpf": "303.030.303-03",
       "name": "Fernanda Souza",
       "profession": "Pilot",
@@ -509,20 +473,11 @@
       "city": "São Paulo",
       "district": "Jardins",
       "visited_on": "2026-06-15"
-    },
-    {
-      "id": "8ec6",
-      "name": "Testador",
-      "cpf": "999.999.999-99",
-      "profession": "Testador Oficial",
-      "gender": "Masculino",
-      "city": "Fortaleza",
-      "district": "Barroso"
     }
   ],
   "user": [
     {
-      "id": "1",
+      "id": 1,
       "name": "admin",
       "password": "admin"
     }

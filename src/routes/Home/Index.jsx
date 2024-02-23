@@ -14,10 +14,7 @@ function HomePage() {
     <PrimeReactProvider>
       <>
         <div className="logoPrefeitura">
-          <img
-            src="./assets/Brasão_de_Fortaleza_-_Gestão_RC.png"
-            alt="logo prefeitura de fortaleza"
-          />
+          <img src="src\assets\Logo_Prefeitura-Png.png" alt="Logo Prefeitura de Fortaleza" />
         </div>
         {cadastroForm ? (
           <CadastroVisitante handleCadastroForm={handleCadastroForm} />

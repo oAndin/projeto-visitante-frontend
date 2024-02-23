@@ -1,9 +1,9 @@
-import PieChartGender from "../../../components/PieChart/Index";
+import PieChart from "../../../components/PieChart/Index";
 
 const PieChartsPage = () => {
   return (
     <>
-      <PieChartGender />
+      <PieChart />
     </>
   );
 };

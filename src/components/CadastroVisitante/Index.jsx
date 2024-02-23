@@ -31,7 +31,7 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
       city !== "" &&
       district !== ""
     ) {
-      fetch("http://localhost:8000/visitante", {
+      fetch("http://localhost:5000/visitante", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,11 +98,11 @@ const CadastroVisitante = ({ handleCadastroForm }) => {
             <label htmlFor="">Gênero</label>
             <select
               name="gender"
-              id=""
+              id="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
             >
-              <option name="gender" value="Masculino">
+              <option name="gender" value="" >
                 Selecione uma opção
               </option>
               <option name="gender" value="Masculino">
