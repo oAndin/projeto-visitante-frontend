@@ -7,24 +7,21 @@ import useMonths from "../../hooks/useMonths";
 const BarCharts = () => {
   const [isDay, setIsDay] = useState(true);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [chartData, setChartData] = useState({});
+  const [chartOptions, setChartOptions] = useState({});
 
-  const { data: daysData, loading: daysLoading, error: daysError } = useDays();
-  const {
-    data: monthsData,
-    loading: monthsLoading,
-    error: monthsError,
-  } = useMonths();
-
-  const fetchData = () => {
-    let labelDays = daysData.map((day) => day.id);
-    let labelMonths = monthsData.map((month) => month.name);
+  const { data: daysData } = useDays([]);
+  const { data: monthsData } = useMonths([]);
+  
+  const fetchData = async () => {
+    let daysLabel = daysData.map((day) => day.name);
+    let monthsLabel = monthsData.map((month) => month.name);
     let dataType = isDay ? "day" : "month";
-    axios.get(`visitante`).then((visitantes) => {
-      console.log(visitantes);
-    });
 
     const data = {
-      labels: isDay ? labelDays : labelMonths,
+      labels: isDay ? daysLabel : monthsLabel,
+      // labels: isDay ? labelDays : labelMonths,
       datasets: [
         {
           label: isDay ? "dia" : "mês",
@@ -59,11 +56,10 @@ const BarCharts = () => {
     setChartData(data);
     setChartOptions(options);
   };
-  const [chartData, setChartData] = useState({});
-  const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     fetchData();
+    setLoading(false);
   }, [isDay]);
 
   return (

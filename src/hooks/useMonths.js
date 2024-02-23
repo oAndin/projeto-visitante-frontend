@@ -24,7 +24,7 @@ const useMonths = () => {
   }, []);
 
 
-    return { data, loading, error };
+    return {data, error};
 };
 
 export default useMonths;

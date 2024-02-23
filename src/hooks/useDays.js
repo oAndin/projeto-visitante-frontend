@@ -20,7 +20,7 @@ const useDays = () => {
     };
     fetchDays();
   }, []);
-  return { data, loading, error };
+  return { data, error };
 };
 
 export default useDays;
