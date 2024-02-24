@@ -11,23 +11,37 @@ const BarCharts = () => {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
-  const { data: daysData } = useDays([]);
-  const { data: monthsData } = useMonths([]);
-  
+  const days = useDays([]);
+  const months = useMonths([]);
+
   const fetchData = async () => {
-    let daysLabel = daysData.map((day) => day.name);
-    let monthsLabel = monthsData.map((month) => month.name);
+    
     let dataType = isDay ? "day" : "month";
+    
+    
+
+    // create a function which goes though the array, creating an object with name and count, and counts the number of times a day appears
+    const dayCount = [
+      days.map((day) => {
+        return {
+          dayNumber: day.id,
+          count: 0,
+        }
+      })
+    ];
+    console.log(days);
+    console.log(dayCount);
+
 
     const data = {
-      labels: isDay ? daysLabel : monthsLabel,
-      // labels: isDay ? labelDays : labelMonths,
+      // labels: isDay ? ["dia 1"] : ["Janeiro"],
+      labels: isDay ? days : months,
       datasets: [
         {
           label: isDay ? "dia" : "mês",
           data: isDay
             ? [1, 2, 3, 4, 5, 4, 3, 2, 1, 6, 3, 13, 35, 45]
-            : [1234, 12345, 1234, 12345],
+            : [10, 20, 10, 20, 10, 20],
           backgroundColor: [
             "rgba(255, 159, 64, 0.2)",
             "rgba(75, 192, 192, 0.2)",
@@ -45,11 +59,16 @@ const BarCharts = () => {
       ],
     };
     const options = {
+      // aspectRatio: 1,
       responsive: true,
       scales: {
         y: {
+          max: 100,
           beginAtZero: true,
         },
+        x: {
+          
+        }
       },
     };
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { API } from "../services";
 
 const useDays = () => {
-  const [data, setData] = useState([]);
+  const [days, setDays] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
 
@@ -10,8 +10,8 @@ const useDays = () => {
     const fetchDays = async () => {
       try {
         const response = await API.get(`days`);
-        console.log(response.data);
-        setData(response.data);
+        let daysLabel = response.data.map((day) => day.id);
+        setDays(daysLabel);
       } catch (error) {
         setError(error);
       } finally {
@@ -20,7 +20,8 @@ const useDays = () => {
     };
     fetchDays();
   }, []);
-  return { data, error };
+  
+  return days;
 };
 
 export default useDays;
