@@ -7,6 +7,7 @@ import DashBoard from "./routes/DashBoard/Index.jsx";
 import BarChartsPage from "./routes/Charts/BarChartsPage/Index.jsx";
 import HomePage from "./routes/Home/Index.jsx";
 import PieChartsPage from "./routes/Charts/PieChartsPage/Index.jsx";
+import PieCityPage from "./routes/Charts/PieCityPage/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         // block non adm acess to dashboard
         path: "/dashboard/piechart",
         element: <PieChartsPage />,
+      },
+      {
+        path:"/dashboard/citychart",
+        element: <PieCityPage />,
       },
     ],
     errorElement: <Error />,

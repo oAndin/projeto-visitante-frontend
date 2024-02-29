@@ -15,8 +15,10 @@ const BarCharts = () => {
   const days = useDays([]);
   const months = useMonths([]);
   const  visitantes = useVisitantes([]);
+  console.log(visitantes);
 
   const fetchData = async () => {
+    let monthName;
     // create a function which goes though the array, creating an object with name and count, and counts the number of times a day appears
     const dayCount = [
       days.map((day) => {
@@ -27,7 +29,6 @@ const BarCharts = () => {
         });
       }),
     ];
-    // let monthName;
     // switch (monthName) {
     //   case "Janeiro":
     //     count += 1;

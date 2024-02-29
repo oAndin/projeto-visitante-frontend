@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
 
-  export default function PieChart() {
+const GraficoCidade = () => {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
-  const fetchVisitantesGenero = () => {
-    fetch("http://localhost:8080/visitante/grafico-por-genero")
+  const fetchVisitantesCidade = () => {
+    fetch("http://localhost:8080/visitante/grafico-por-cidade")
       .then((response) => response.json())
       .then((visitantes) => {
         const data = {
-          labels: visitantes.map(v => v.genero),
+          labels: visitantes.map((v) => v.cidade),
           datasets: [
             {
-              data: visitantes.map(v => v.total),
+              data: visitantes.map((v) => v.total),
               backgroundColor: ["#3fd5ffab", "#ff3f3fab", "#a83fffab"],
               hoverBackgroundColor: ["#3fd5ff", "#ff3f3f", "#a83fff"],
             },
@@ -35,7 +35,7 @@ import { Chart } from "primereact/chart";
   };
 
   useEffect(() => {
-    fetchVisitantesGenero();
+    fetchVisitantesCidade();
   }, []);
 
   return (
@@ -44,3 +44,5 @@ import { Chart } from "primereact/chart";
     </>
   );
 }
+
+export default GraficoCidade;
