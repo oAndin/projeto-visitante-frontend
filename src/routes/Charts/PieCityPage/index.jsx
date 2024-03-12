@@ -6,6 +6,6 @@ const PieCityPage = () => {
       <GraficoCidade />
     </>
   );
-};
+}
 
 export default PieCityPage;
